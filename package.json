@@ -1,0 +1,39 @@
+{
+  "name": "cordova-plugin-tci-sdk",
+  "version": "1.0.0",
+  "description": "This is official TCI (Telecommunication Ministry of Iran - tci.ir) Payment SDK",
+  "cordova": {
+    "id": "cordova-plugin-tci-sdk",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IVIR3zaM/TciSdk.git"
+  },
+  "keywords": [
+    "tci",
+    "tci.ir",
+    "tci-sdk",
+    "tci-payment",
+    "tci-payment-sqk",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": {
+    "name": "Mohammad Reza Maghoul"
+  },
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/IVIR3zaM/TciSdk/issues"
+  },
+  "homepage": "https://github.com/IVIR3zaM/TciSdk#readme",
+  "readmeFilename": "README.md"
+}

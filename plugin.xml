@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-tci-sdk"
+        version="0.9">
+
+    <name>TCI Payment SDK</name>
+    <description>This is official TCI (Telecommunication Ministry of Iran - tci.ir) Payment SDK</description>
+
+    <author>Mohammad Reza Maghoul</author>
+    <keywords>tci,tci.ir,tci-sdk,tci-payment,tci-payment-sqk</keywords>
+    <license>Apache 2.0</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/TciSdk.js" name="TciSdk">
+        <clobbers target="TciSdk" />
+    </js-module>
+
+    <platform name="android">
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+        <framework src="com.android.support:appcompat-v7:23+"/>
+        <framework src="com.android.support:recyclerview-v7:23+"/>
+        <framework src="com.android.support:cardview-v7:21+"/>
+        <framework src="com.android.support:support-v4:19+"/>
+        <resource-file src="src/android/Android_Payment_SDK.aar" target="libs/TciPaymentSDK.aar" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TciSdk">
+                <param name="android-package" value="org.apache.cordova.plugin.TciSdk" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/TciSdk.java"
+                     target-dir="src/org/apache/cordova/plugin"/>
+    </platform>
+</plugin>
