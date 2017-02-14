@@ -3,10 +3,10 @@
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-tci-sdk"
-        version="0.9">
+        version="1.0.1">
 
     <name>TCI Payment SDK</name>
-    <description>This is official TCI (Telecommunication Ministry of Iran - tci.ir) Payment SDK</description>
+    <description>This is official TCI (Telecommunication Ministry of Iran - tci.ir) Payment SDK for Cordova Android Projects</description>
 
     <author>Mohammad Reza Maghoul</author>
     <keywords>tci,tci.ir,tci-sdk,tci-payment,tci-payment-sqk</keywords>
