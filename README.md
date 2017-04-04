@@ -17,7 +17,7 @@ For Cordova CLI -
 Usage (in javascript anywhere in your project)
 ==============================================
 
-- TciSdk.Buy("appName", "itemName", successCallback, errorCallback);
+- TciSdk.Buy("appName", "itemName", successCallback, errorCallback, "customPrice"); // customPrice is optional
 
 the success callback and error callback have an `data` attribute that is a json object returned from the SDK. the sample code maybe like this:
 

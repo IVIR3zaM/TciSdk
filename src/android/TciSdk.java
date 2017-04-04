@@ -52,7 +52,7 @@ public class TciSdk extends CordovaPlugin {
         this.callback = callbackContext;
         if (action.equals("Buy")) {
             try{
-                return Buy(args.getString(0), args.getString(1));
+                return Buy(args.getString(0), args.getString(1), args.getString(2));
             } catch (JSONException e) {
                 callback.error(e.getMessage());
                 return false;
@@ -62,16 +62,19 @@ public class TciSdk extends CordovaPlugin {
         return false;
     }
     
-    private boolean Buy(final String appName, final String itemName) {
+    private boolean Buy(final String appName, final String itemName, final String customPrice) {
         Log.v(TAG, "Buy for appName= " + appName + " itemName = " + itemName);
         final CordovaInterface cordovaObj = cordova;
         final CordovaPlugin plugin = this;
-    
+
         cordova.getActivity().runOnUiThread(new Runnable() {
             public void run() {
                 Intent intent = new Intent(cordovaObj.getActivity().getApplicationContext(), FragmentPlaceHolder.class);
                 intent.putExtra("appName", appName);
                 intent.putExtra("itemName", itemName);
+                if (Integer.parseInt(customPrice) > 0) {
+                    intent.putExtra("customPrice", customPrice);
+                }
                 cordovaObj.startActivityForResult(plugin, intent, ACTIVITY_CODE_PAYMENT);
              }
         });
